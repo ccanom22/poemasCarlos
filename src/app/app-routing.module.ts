@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'contar-silabas',
+    loadChildren: () => import('./contar-silabas/contar-silabas.module').then( m => m.ContarSilabasPageModule)
+  },
+  {
+    path: 'comprobar-rimas',
+    loadChildren: () => import('./comprobar-rimas/comprobar-rimas.module').then( m => m.ComprobarRimasPageModule)
+  },
+  {
+    path: 'buscar-rima',
+    loadChildren: () => import('./buscar-rima/buscar-rima.module').then( m => m.BuscarRimaPageModule)
+  },
 ];
 
 @NgModule({

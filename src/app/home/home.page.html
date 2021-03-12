@@ -1,20 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-header> 
+  <ion-toolbar>
+  <ion-title size="large">Bienvenidos a PoemApp</ion-title>
+</ion-toolbar>
+</ion-header>
+  
+<div id="container">
+    <img width="400" height="230" src="../../assets/img/PantallaPrincipal.jpg" alt="" />
+    
+    <ion-card color="primary">
+      <ion-card-content>
+       En este apartado usted podrá analizar la métrica de su verso en unos segundos. El programa determinará el número de sílabas que tiene su verso y además le hará una división de éste.
+      </ion-card-content>
+      <ion-button color="danger" expand="full" routerLink="/contar-silabas">
+        <ion-icon name="pencil-outline"></ion-icon>
+        Analizar métrica
+      </ion-button>
+    </ion-card>
+    
+    <ion-card color="primary">
+      <ion-card-content>
+        En este apartado usted podrá introducir dos versos. El programa, además de medirlos, nos dirá si riman.
+      </ion-card-content>
+      <ion-button color="danger" expand="full" routerLink="/comprobar-rimas">
+        <ion-icon name="book-outline"></ion-icon>
+        Comprobar rimas
+      </ion-button>
+    </ion-card>
+
+    <ion-card color="primary">
+      <ion-card-content>
+       En este apartado usted podrá obtener palabras que rimen con la palabra que decida. (Funcionalidad no disponible)
+      </ion-card-content>
+      <ion-button color="danger" expand="full" routerLink="/buscar-rima">
+        <ion-icon name="search"></ion-icon>
+        Buscar palabra que rime
+      </ion-button>
+    </ion-card>
+  </div> 
 </ion-content>

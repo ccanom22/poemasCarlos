@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comprobar rimas</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img width="400" height="190" src="../../assets/img/comprobar1.jpg" alt="" />
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">Primer verso</ion-label>
+      <ion-input type="text"
+                  [(ngModel)]="Verso1"></ion-input>
+    </ion-item>
+    <ion-list-header *ngIf="cadenaSeparada1">Análisis: {{cadenaSeparada1}}</ion-list-header>
+    <ion-list-header *ngIf="numeroDeVersos1">Nº de versos: {{numeroDeVersos1}}</ion-list-header>
+    
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">Segundo verso</ion-label>
+      <ion-input type="text"
+                  [(ngModel)]="Verso2"></ion-input>
+    </ion-item>
+    <ion-list-header *ngIf="cadenaSeparada2">Análisis: {{cadenaSeparada2}}</ion-list-header>
+    <ion-list-header *ngIf="numeroDeVersos2">Nº de versos: {{numeroDeVersos2}}</ion-list-header>
+  </ion-card>
+  <ion-list-header *ngIf="respuesta">¿Rima?: {{mensaje}}</ion-list-header>
+  <ion-button (click)=validarDato(Verso1,Verso2) (click)=llenarSilabas() expand="full" type="submit">Analizar</ion-button>
+</ion-content>

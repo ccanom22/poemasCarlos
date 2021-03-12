@@ -1,5 +1,7 @@
 {
   "name": "poemasCarlos",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

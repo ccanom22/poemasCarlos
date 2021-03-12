@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contador de sílabas</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img width="400" height="190" src="../../assets/img/contar3.jpg" alt="" />
+  
+<ion-card>
+  <ion-item>
+    <ion-label position="floating">Verso</ion-label>
+    <ion-input type="text"
+                [(ngModel)]="Verso"
+                ></ion-input>
+              </ion-item>
+             
+  
+  <ion-list-header *ngIf="cadenaSeparada">Análisis: {{cadenaSeparada}}</ion-list-header>
+  <ion-list-header *ngIf="numeroDeVersos">Nº de versos: {{numeroDeVersos}}</ion-list-header>
+  <ion-button (click)=validarDato(Verso) (click)=llenarSilabas()  expand="full" type="submit">Analizar</ion-button>
+</ion-card>
+
+
+
+
+</ion-content>
